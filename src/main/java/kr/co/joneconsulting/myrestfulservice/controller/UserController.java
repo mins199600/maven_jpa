@@ -1,5 +1,6 @@
 package kr.co.joneconsulting.myrestfulservice.controller;
 
+import jakarta.validation.Valid;
 import kr.co.joneconsulting.myrestfulservice.bean.User;
 import kr.co.joneconsulting.myrestfulservice.dao.UserDaoService;
 import kr.co.joneconsulting.myrestfulservice.exception.UserNotFoundException;
@@ -8,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.List;
 
 @RestController
@@ -34,7 +34,7 @@ public class UserController {
         return user;
     }
     @PostMapping("/users")
-    public ResponseEntity<User> createUser(@RequestBody User user){
+    public ResponseEntity<User> createUser(@Valid @RequestBody User user){
          User savedUser = service.save(user);
 
          URI location = ServletUriComponentsBuilder.fromCurrentRequest()

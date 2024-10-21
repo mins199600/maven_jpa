@@ -13,9 +13,10 @@ public class UserDaoService {
     private static int usersCount = 3;
 
     static {
-        users.add(new User(1,"sumin",new Date()));
-        users.add(new User(2,"moonsu",new Date()));
-        users.add(new User(3,"choco",new Date()));
+        users.add(
+                new User(1,"sumin",new Date(), "test1","111111-1111111"));
+        users.add(new User(2,"moonsu",new Date(), "test2","222222-1111111"));
+        users.add(new User(3,"choco",new Date(), "test3","333333-1111111"));
     }
 
     //전체 데이터 조회
