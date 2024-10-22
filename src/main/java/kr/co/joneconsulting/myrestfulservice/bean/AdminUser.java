@@ -1,7 +1,6 @@
 package kr.co.joneconsulting.myrestfulservice.bean;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -24,4 +23,5 @@ public class AdminUser {
     private String password;
     //@JsonIgnore
     private String ssn;
+
 }
